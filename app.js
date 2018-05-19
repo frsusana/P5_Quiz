@@ -3,15 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var partials = require('express-partials');//partials
+
 var indexRouter = require('./routes/index');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'js');
+app.set('view engine', 'ejs');
 
 app.use(partials()); //partials
 app.use(logger('dev'));
