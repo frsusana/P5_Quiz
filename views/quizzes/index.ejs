@@ -1,0 +1,13 @@
+<h1> Quizzes: </h1>
+
+<table>
+    <% for (let i in quizzes) { %>
+        <% let quiz = quizzes[i]; %>
+        <tr>
+            <td>
+                Pregunta [<%= quiz.id%>]:
+                <%= quiz.question%>
+            </td>
+        </tr>
+    <% } %>
+</table>
